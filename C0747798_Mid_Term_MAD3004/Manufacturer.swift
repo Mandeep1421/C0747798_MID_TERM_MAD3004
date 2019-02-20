@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class Manufacturer
+{
+    var Manufacture_Id: String
+    var Manufacturer_Name: String
+
+init()
+{
+    Manufacture_Id = String()
+    Manufacturer_Name = String()
+}
+    
+    init(ManuId:String, ManuName:String)
+    {
+        self.Manufacture_Id = ManuId
+        self.Manufacturer_Name = ManuName
+        
+    }
+}
