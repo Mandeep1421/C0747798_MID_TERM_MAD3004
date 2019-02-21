@@ -8,5 +8,13 @@
 
 import Foundation
 
-print("Hello, World!")
+ print("-----------MID TERM------------")
 
+var m1 = Manufacturer()
+m1.displayData()
+
+var p1 = Product()
+p1.DataDisplay()
+
+var o1 = Order()
+o1.Display()

@@ -38,5 +38,13 @@ class Order {
     {
         
     }
+    
+    func Display()
+    {
+        print("Order Id::\(self.Order_Id)")
+        print("Order Date::\(self.Order_Date)")
+        print("Product Array::\(self.Product_Array)")
+        print("Order Total::\(self.Order_Total)")
+    }
 }
 

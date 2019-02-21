@@ -11,7 +11,7 @@ import Foundation
 class Manufacturer: IDisplay
 {
     func display() {
-        <#code#>
+        
     }
     
     var Manufacture_Id: String
@@ -28,5 +28,11 @@ init()
         self.Manufacture_Id = ManuId
         self.Manufacturer_Name = ManuName
         
+    }
+    
+func displayData()
+{
+    print("Manufacturer Id::\(self.Manufacture_Id)")
+    print("Manufacturer Name::\(self.Manufacturer_Name)")
     }
 }
