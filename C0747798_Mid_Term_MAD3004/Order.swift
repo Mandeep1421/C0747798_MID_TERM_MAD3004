@@ -12,39 +12,46 @@ class Order {
     
     var Order_Id: String
     var Order_Date: Date
-    //var Product_Array: Product
-    var Order_Total: Float
+    var Product_Array: [Product]
+    var Order_Total : Double!
+    var orderDictionary = Dictionary<Int, [Product]>()
     
-    init()
-    {
-        Order_Id = String()
-        Order_Date = Date()
-        //Product_Array = Product()
-        Order_Total = Float()
-       
-    }
     
-    init(OrderId:String, OrderDate:Date,  OrderTotal: Float)
+    init(OrderId:String,Product_Array:[Product])
     {
         self.Order_Id = OrderId
-        self.Order_Date = OrderDate
-        //self.Product_Array = ProductArray
-        self.Order_Total = OrderTotal
-       
-        
+        self.Product_Array = Product_Array
+        var total: Double!
+        for i in 0..<Product_Array.count
+        {
+            total += Product_Array[i].Price
+        }
+        self.Order_Total! = total
+        self.Order_Date = Date()
     }
-    
-    func OrderById()
-    {
-        
-    }
-    
+
     func Display()
     {
         print("Order Id::\(self.Order_Id)")
         print("Order Date::\(self.Order_Date)")
-        //print("Product Array::\(self.Product_Array)")
-        print("Order Total::\(self.Order_Total)")
+        for a in 0..<Product_Array.count
+        {
+            print("Product: \(Product_Array[a].Product_Name)")
+        }
+        print("Order Total: \(Order_Total!)\n")
     }
-}
+    
+    func dictionary(orderID:String, productList:[Product])
+    {
+        self.orderDictionary.updateValue(productList, forKey: orderID)
+    }
+    
+    func displayOrderDictionary() {
+        for (key,value) in orderDictionary
+        {
+            print("Dictionary Key: \(key), Value: \(value)")
+        }
+    }
+    }
+
 

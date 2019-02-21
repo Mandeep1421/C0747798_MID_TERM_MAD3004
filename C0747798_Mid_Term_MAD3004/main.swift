@@ -30,6 +30,30 @@ print("-----------------------")
 p5.DataDisplay()
 print("-----------------------")
 
-var o1 = Order()
+var totalProducts = [p1,p2,p3,p4,p5]
+for x in totalProducts{
+    x.displayData()
+}
+
+var OrderProduct = Array<Product>()
+OrderProduct.append(p1)
+OrderProduct.append(p2)
+OrderProduct.append(p3)
+OrderProduct.append(p4)
+OrderProduct.append(p5)
+
+var o1 = Order(OrderId: "O08282", Product_Array: [p2,p3,p5])
 o1.Display()
+var o2 = Order(OrderId: "O07554", Product_Array: [p1,p4,p5,p3])
+o2.Display()
+var o3 = Order(OrderId: "O44282", Product_Array: [p1,p2,p3,p4,p5])
+o3.Display()
+
 print("-----------------------")
+
+o1.dictionary(orderID: o1.Order_Id, productList: o1.Product_Array)
+o1.displayOrderDictionary()
+o2.dictionary(orderID: o2.Order_Id, productList: o2.Product_Array)
+o2.displayOrderDictionary()
+o3.dictionary(orderID: o3.Order_Id, productList: o3.Product_Array)
+o3.displayOrderDictionary()
