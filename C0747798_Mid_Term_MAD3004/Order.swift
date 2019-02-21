@@ -12,23 +12,23 @@ class Order {
     
     var Order_Id: String
     var Order_Date: Date
-    var Product_Array: Product
+    //var Product_Array: Product
     var Order_Total: Float
     
     init()
     {
         Order_Id = String()
         Order_Date = Date()
-        Product_Array = Product()
+        //Product_Array = Product()
         Order_Total = Float()
        
     }
     
-    init(OrderId:String, OrderDate:Date, ProductArray:Product, OrderTotal: Float)
+    init(OrderId:String, OrderDate:Date,  OrderTotal: Float)
     {
         self.Order_Id = OrderId
         self.Order_Date = OrderDate
-        self.Product_Array = ProductArray
+        //self.Product_Array = ProductArray
         self.Order_Total = OrderTotal
        
         
@@ -43,7 +43,7 @@ class Order {
     {
         print("Order Id::\(self.Order_Id)")
         print("Order Date::\(self.Order_Date)")
-        print("Product Array::\(self.Product_Array)")
+        //print("Product Array::\(self.Product_Array)")
         print("Order Total::\(self.Order_Total)")
     }
 }

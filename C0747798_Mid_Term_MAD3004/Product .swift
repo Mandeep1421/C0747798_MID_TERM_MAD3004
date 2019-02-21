@@ -32,6 +32,7 @@ init(ProId:String, ProName:String, Price:Float, Quantity: Int)
         super.init()
         
     }
+    
     func DataDisplay()
     {
         print("Product Id::\(self.Product_Id)")
