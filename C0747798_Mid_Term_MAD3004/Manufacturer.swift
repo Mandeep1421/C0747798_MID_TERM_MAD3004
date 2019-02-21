@@ -8,8 +8,12 @@
 
 import Foundation
 
-class Manufacturer
+class Manufacturer: IDisplay
 {
+    func display() {
+        <#code#>
+    }
+    
     var Manufacture_Id: String
     var Manufacturer_Name: String
 
